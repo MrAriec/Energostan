@@ -1,0 +1,36 @@
+.news {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-top: 180px;
+    color: #1A3B69;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.news img {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.news p:first-of-type,
+.news p:nth-of-type(3),
+.news p:nth-of-type(5) {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.news p:nth-of-type(2),
+.news p:nth-of-type(4),
+.news p:nth-of-type(6) {
+    font-size: 20px;
+    font-weight: 300;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .news {
+        padding-top: 100px;
+    }
+}

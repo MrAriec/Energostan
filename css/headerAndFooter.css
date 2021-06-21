@@ -1,0 +1,469 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapperforFooter {
+    width: 100vw;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    background-color: #fff;
+    max-height: 100px;
+    z-index: 9999;
+}
+
+.mainInfo {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainInfo_contacts {
+    display: flex;
+    font-size: 16px;
+}
+
+.mainInfo_contacts img {
+    height: 36px;
+    width: 36px;
+    position: relative;
+    top: 30%;
+    left: -10%;
+
+}
+
+.mainInfo_contacts p {
+    padding-top: 15px;
+}
+
+.navBar {
+    width: 100vw;
+    background-color: #27589C;
+}
+
+.navBar_bigScreen ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navBar_bigScreen {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.navBar_bigScreen li {
+    display: block;
+}
+
+.navBar_bigScreen a {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: 0.5s;
+}
+
+.navBar_bigScreen p {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    text-decoration: none;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: 0.5s;
+}
+
+.navBar_bigScreen p:hover {
+    transform: scale(1.1);
+}
+
+.navBar_bigScreen a:hover {
+    color: #EF8711;
+}
+
+.navBar_otherScreen {
+    position: relative;
+    display: none;
+}
+
+.btnBurger {
+    height: 35px;
+    width: 35px;
+    position: relative;
+    overflow: hidden;
+    right: -90vw;
+}
+
+.btnBurger span {
+    transition: all ease 0.5s;
+}
+
+
+.btnBurger span:first-of-type {
+    width: 35px;
+    display: block;
+    height: 2px;
+    top: 25%;
+    position: absolute;
+    background-color: #fff;
+}
+
+.btnBurger span:nth-of-type(2) {
+    width: 35px;
+    display: block;
+    height: 2px;
+    top: 50%;
+    position: absolute;
+    background-color: #fff;
+}
+
+.btnBurger span:nth-of-type(3) {
+    width: 35px;
+    display: block;
+    height: 2px;
+    top: 75%;
+    position: absolute;
+    background-color: #fff;
+}
+
+.btnBurger.active span:first-of-type {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+.btnBurger.active span:nth-of-type(2) {
+    display: none;
+}
+
+.btnBurger.active span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 50%;
+}
+
+.burgerMenu {
+    width: 100vw;
+    height: 90vh;
+    background-color: #27589C;
+    position: absolute;
+    right: -100vw;
+    transition: all 1s;
+    display: none;
+}
+
+.burgerMenu.active {
+    right: 0;
+}
+
+.burgerMenu ul {
+    list-style: none;
+}
+
+.burgerMenu a,
+.burgerMenu p {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.question {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: -120vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 99999;
+}
+
+.question.active {
+    top: 0;
+}
+
+
+
+.question_form {
+    width: 570px;
+    background-color: #5F7FAC;
+    margin: 0 auto;
+    position: relative;
+    top: 20%;
+    border-radius: 15px;
+}
+
+.question_form p:first-of-type {
+    text-align: center;
+    font-size: 27px;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+
+.question_form p:nth-of-type(2) {
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.question_input {
+    display: flex;
+    flex-direction: column;
+}
+
+#nameClient,
+#numberClient,
+#projectClient {
+    width: 430px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
+
+
+
+#nameClient:focus,
+#numberClient:focus,
+#projectClient:focus {
+    outline: none;
+}
+
+#btnClient {
+    transition: 0.5s;
+}
+
+#btnClient:hover {
+    transform: scale(1.03);
+}
+
+#btnClient,
+#btnClient:focus,
+#btnClient:active {
+    width: 230px;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 23px;
+    background-color: #27589C;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+
+
+.question_krest span:first-of-type {
+    position: absolute;
+    top: 3%;
+    margin: 5px;
+    right: 1%;
+    transform: rotate(45deg);
+    display: block;
+    height: 2px;
+    width: 20px;
+    background-color: #fff;
+}
+
+.question_krest span:last-of-type {
+    margin: 5px;
+    position: absolute;
+    top: 3%;
+    right: 1%;
+    transform: rotate(-45deg);
+    display: block;
+    height: 2px;
+    width: 20px;
+    background-color: #fff;
+}
+
+footer {
+    background-color: #27589C;
+    margin-top: 15px;
+    color: #8ca7cc;
+    font-weight: 600;
+    font-size: 18px;
+    height: 220px;
+}
+
+.footer_wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.footer_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.footer_info a,
+.footer_unicText {
+    display: block;
+    color: #8ca7cc;
+    font-size: 14px;
+    font-family: Montserrat;
+    font-weight: 100;
+    text-decoration: none;
+
+}
+
+.wrapperforFooter {
+    min-height: calc(100vh - 235px);
+}
+
+@media screen and (max-width: 768px) {
+    .navBar_bigScreen {
+        display: none;
+    }
+
+    footer {
+        height: auto;
+    }
+
+
+
+    .burgerMenu {
+        display: block;
+    }
+
+    .mainInfo {
+        width: 100vw;
+    }
+
+    .navBar_otherScreen {
+        display: block;
+    }
+
+    .footer_info {
+        grid-template-columns: 1fr;
+    }
+
+    .footer_wrapper {
+        padding-left: 15px;
+    }
+
+    .question_form {
+        width: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #nameClient,
+    #numberClient,
+    #projectClient,
+    #btnClient {
+        width: auto;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .mainInfo img {
+        margin: 0 auto;
+    }
+
+    #imgSmall {
+        display: none;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .mainInfo_contacts p {
+        display: none;
+    }
+
+    .mainInfo {
+        flex-direction: column;
+        justify-content: none;
+    }
+}

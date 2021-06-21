@@ -1,0 +1,71 @@
+.contactmainOfice {
+    padding-top: 100px;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 100px;
+}
+
+.contactmainOfice:first-of-type {
+    padding-top: 180px;
+    padding-bottom: 0;
+}
+
+.contactmainOfice_text {
+    color: #1A3B69;
+}
+
+.contactmainOfice_text p:first-of-type {
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.contactmainOfice_text p:nth-of-type(2),
+.contactmainOfice_text p:nth-of-type(4),
+.contactmainOfice_text p:nth-of-type(6),
+.contactmainOfice_text p:nth-of-type(8) {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.contactmainOfice_text p:nth-of-type(3),
+.contactmainOfice_text p:nth-of-type(5),
+.contactmainOfice_text p:nth-of-type(7),
+.contactmainOfice_text p:nth-of-type(9) {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.contactmainOfice_map {
+    overflow: hidden;
+    padding-bottom: 80%;
+    position: relative;
+    height: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.contactmainOfice_map iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+    .contactmainOfice:first-of-type {
+        grid-template-columns: 1fr;
+        padding-top: 100px;
+    }
+
+    .contactmainOfice {
+        grid-template-columns: 1fr;
+    }
+}

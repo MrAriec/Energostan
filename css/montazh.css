@@ -1,0 +1,250 @@
+body {
+    color: #1A3B69;
+}
+
+
+.maintext {
+    padding-top: 180px;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.maintext p:first-child,
+.maintext p:nth-of-type(5) {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.maintext p:nth-of-type(2) {
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.maintext p {
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+.maintext img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.advanters {
+    padding: 15px;
+    background-color: #DDECFF;
+    color: #1A3B69;
+}
+
+.advantres_wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.advantres_wrapper p:first-of-type {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 15px;
+}
+
+.advantres_wrapper p:nth-of-type(2) {
+    font-size: 18px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.advantres_wrapper ul {
+    list-style: none;
+    display: flex;
+    max-width: 800px;
+    flex-direction: column;
+    margin: 0 auto;
+
+}
+
+.advantres_wrapper li {
+    display: flex;
+    padding-top: 20px;
+
+}
+
+.advantres_wrapper img {
+    padding-right: 15px;
+    width: 50px;
+    height: 50px;
+
+}
+
+#unicText {
+    display: block;
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.resultWork {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+.resultWork_slider .slick-arrow {
+    position: absolute;
+    z-index: 2;
+    font-size: 0px;
+    height: 35px;
+    width: 35px;
+    top: 100%;
+    border: 1px solid white;
+}
+
+.resultWork_slider .slick-arrow.slick-prev {
+    left: 530px;
+    background-image: url(../img/btnPrev.png);
+    background-color: #fff;
+    z-index: 22;
+}
+
+.resultWork_slider .slick-arrow.slick-next {
+    right: 530px;
+    background-image: url(../img/btnNext.png);
+    background-color: #fff;
+    z-index: 222;
+}
+
+.resultWork_text {
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.resultWork {
+    position: relative;
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.resultWork_slide {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+        "img1 img2"
+        "textSlider textSlider";
+    grid-template-columns: 1fr 1fr;
+
+}
+
+#sliderImg1 {
+    grid-area: img1;
+}
+
+#sliderImg2 {
+    grid-area: img2;
+}
+
+#sliderText {
+    grid-area: textSlider;
+}
+
+.resultWork_slide {
+    text-align: center;
+}
+
+.resultWork_slide img {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.projects {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.projects p {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.projects ul {
+    list-style: none;
+}
+
+.projects li {
+    display: flex;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.projects img {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: -0px;
+    padding-right: 5px;
+}
+
+@media screen and (max-width: 1024px) {
+    .advantres_wrapper li {
+        padding-left: 250px;
+    }
+
+    .projects p {
+        padding-left: 15px;
+    }
+
+    .resultWork_text {
+        padding-left: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .advantres_wrapper li {
+        display: block;
+        padding-left: 0px;
+    }
+
+    .resultWork_slide {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resultWork_slide img {
+        display: block;
+        max-width: 380px;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+
+    .advantres_wrapper img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .maintext {
+        padding-top: 100px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .resultWork_slide img {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        max-width: 275px;
+
+    }
+
+}
